@@ -46,12 +46,14 @@ const features = [
 ];
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <main>
       <section className="hero" aria-labelledby="hero-title">
         <Image
           className="heroImage"
-          src="/ai-glasses-hero.png"
+          src={`${basePath}/ai-glasses-hero.png`}
           alt="配戴 AI 眼鏡時看見的第一人稱捷運場景"
           fill
           priority
